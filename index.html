@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto - Alura Challenges ONE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <script src="https://kit.fontawesome.com/8c8c83e1d6.js" crossorigin="anonymous"></script>
+
+<body>
+    <div class="fondo"></div>
+    <section class="encrip">
+        <header class="logo">
+            <div class="img-logo">
+                <h1>encriptador</h1>
+                <p>Reto encriptador por ORACLE</p>
+            </div>
+            <!-- <div class="contacto">
+                    <p class="creditos">Desarrolado por Eduardo</p>
+                    <a href="https://github.com/Eddu23"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/edduardo/"><i class="fa-brands fa-linkedin"></i></a>
+                </div> -->
+        </header>
+
+        <div class="input_output">
+            <div class="texto-resultado">
+                <div class="input_result">
+
+                    <textarea name=" textarea" id="myText" placeholder="Ingrese el texto aquí..." required
+                        title="Solo letras minusculas y sin acentos"></textarea>
+
+                    <div class="buttons">
+
+                        <div class="simbol">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <p> Solo letras minusculas y sin acentos</p>
+                        </div>
+
+                        <div class="botones">
+
+                            <button class="button-encriptar-text" type="button" onclick="encriptarTexto()">Encriptar<i
+                                    class="fa-solid fa-key"></i></button>
+                            <button class="button-desencriptar-text" type="button"
+                                onclick="desencriptarTexto()">Desencriptar <i
+                                    class="fa-solid fa-unlock-keyhole"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultado">
+                <div id="Texto-mostrado">
+                    <div id="divInvisible">
+                        <textarea name="textarea" id="demo" readonly></textarea>
+                        <div class="simbol">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <p>Texto encriptado</p>
+                        </div>
+                        <button class="button-desencriptar-text" type="button" id="Boton-Copiar">Copiar
+                            Texto</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mostrar-result">
+                <div id="Diving">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                </div>
+            </div>
+        </div>
+        <footer class="inf">
+            <div class="container_contact">
+                <div class="contacto">
+                    <h2>Proyecto realizado por Eduardo</h2>
+                </div>
+                <div class="links">
+                    <a target="_blank" href="https://github.com/Eddu23"><i class="fa-brands fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/edduardo/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+
+    <!-- button to get the text in the text field -->
+    <!-- bufatttobern tober gentert thenter tenterxt imesn thenter tenterxt fimesenterld -->
+
+    <script src="app.js"></script>
+</body>
+
+</html>
