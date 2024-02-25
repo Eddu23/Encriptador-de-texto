@@ -44,17 +44,8 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  /* background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: url("/img/YvUPGUK.jpg");
-  font: 100%/1.6 "Open Sans", sans-serif; */
   background-color: hsl(250, 24%, 9%);
   background-image: linear-gradient(38.73deg, rgba(204, 0, 187, 0.25) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.25) 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .encrip {
@@ -130,7 +121,6 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 40px;
 
-  /* From https://css.glass */
   background: hsla(260, 56%, 18%, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
@@ -183,7 +173,6 @@ textarea {
   height: 70%;
   width: 100%;
   box-sizing: border-box;
-  /* background: hsla(0, 0%, 91%, 0.1); */
   background: var(--bg-color);
 }
 
@@ -221,15 +210,21 @@ textarea:focus {
 }
 
 .button-encriptar-text {
-  background: linear-gradient(270deg, #e8488a 0%, #d5304b 100%);
+  background: #d5304b;
   border: none;
   color: #ffffff;
   margin: 15px 15px 15px 0;
 }
 
 .button-encriptar-text:hover {
-  border: 1px solid var(--text-color);
-  color: #ffffff;
+  background: linear-gradient(270deg, #e8488a 0%, #d5304b 100%);
+  transform: translateY(-0.1em);
+  text-shadow: 0 0 1px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff;
+}
+
+.button-encriptar-text:active{
+  box-shadow: inset 0px 0.1em 0.6em #000000;
+  transform: translateY(0em);
 }
 
 .button-desencriptar-text {
@@ -240,8 +235,17 @@ textarea:focus {
 }
 
 .button-desencriptar-text:hover {
-  color: var(--border-color);
-  border: 1px solid var(--text-color);
+  color: #ffffff;
+  border: 1px solid var(--border-color);
+  text-shadow: 0 0 1px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff;
+  transform: translateY(-0.1em);
+  box-shadow: inset 0px 0.1em 0.6em var(--border-color);
+  
+}
+
+.button-desencriptar-text:active {
+  box-shadow: inset 0px 0.1em 1em var(--border-color);
+  transform: translateY(0em)
 }
 
 .botones i,
@@ -304,7 +308,6 @@ textarea:focus {
 .links i {
   font-size: 2rem;
   margin: 0 10px;
-  /* margin: 10px 10px 10px 10px; */
   color: var(--text-color);
 }
 
@@ -346,10 +349,6 @@ textarea:focus {
   .fondo {
     height: auto;
   }
-
-  /* .logo {
-    margin-bottom: 20px;
-  } */
 
   .encrip {
     height: auto;
@@ -410,10 +409,6 @@ textarea:focus {
   .container_contact {
     flex-direction: column;
   }
-
-  /* .logo {
-    margin-top: 80px;
-  } */
 }
 
 @media (max-width: 475px) {

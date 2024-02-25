@@ -17,6 +17,8 @@ function encriptarTexto() {
   texto = texto.replace(/e|i|a|o|u/g, function (reemplazar) {
     return valores[reemplazar];
   });
+
+  //Este if comprueba si hay texto existente y si hay muestra la pantalla de encriptacion
   var ResultText = document.getElementById("demo").innerHTML = texto;
   if (texto = ResultText) {
     invizibilizarDiv();
@@ -52,28 +54,13 @@ function invizibilizarDiv() {
   return;
 }
 
-function copiarAlPortapapeles(id_elemento) {
-  var aux = document.createElement("input");
-  aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
-  document.body.appendChild(aux);
-  aux.select();
-  document.execCommand("copy");
-  document.body.removeChild(aux);
-}
-
+//Esta funcion copia el texto del resultado
 function CopiarTexto() {
-  // Obtener el texto del textarea
   var texto = document.getElementById("demo").value;
-
-  // Crear un elemento de entrada de texto oculto
   var inputTemp = document.createElement("input");
   inputTemp.value = texto;
   document.body.appendChild(inputTemp);
-
-  // Seleccionar y copiar el texto
   inputTemp.select();
   document.execCommand("copy");
-
-  // Eliminar el elemento de entrada de texto oculto
   document.body.removeChild(inputTemp);
 }
